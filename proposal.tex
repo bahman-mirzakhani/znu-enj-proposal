@@ -1,0 +1,44 @@
+% E-mail: bmirzakhani.en@gmail.com
+% Telegram: @Bahman_Mirzakhani
+% Version: 1.4a
+% اگر مقطع دکتری هستید، آپشن msc را  غیرفعال کنید.
+% اگر قصد دارید اعداد در محیط ریاضی، انگلیسی باشند، آپشن digitFa را غیرفعال کنید.
+% اگر روش ارجاع‌دهی به‌صورت عددی است، آپشن refNumber را فعال کنید.
+% اگر قصد چاپ پیشنهاده دارید، آپشن print را فعال کنید.
+\documentclass[%
+	msc,%
+	digitFa,%
+	refNumber,%
+%	print%
+]{./texFiles/znuEnjP}
+% بسته‌ها و تنظیمات مورد نیاز:
+\input{./texFiles/commands}
+\setstretch{1.4}
+\begin{document}
+% مشخصات جدول کارشناس تحصیلات تکمیلی (در صورت نیاز):
+	\input{./texFiles/logoTable}
+% مشخصات پایان‌نامه و دانشجو:
+	\input{./texFiles/Information}
+% مشخصات اساتید راهنما:
+	\input{./texFiles/Supervisors}
+% مشخصات اساتید داور و مشاور:
+	\input{./texFiles/RefereesAndAdvisors}
+% نوع پژوهش، نوع اجرا و …:
+	\input{./texFiles/timeTable}
+% متن پیشنهاده در فایل زیر نوشته می‌شود:
+	\input{./texFiles/bodyText}
+% زمان‌بندی مراحل اجرای پژوهش:
+	\input{./texFiles/scheduling}
+% هزینه‌ها:
+	\input{./texFiles/costs}
+	
+% اگر مقطع کارشناسی‌ارشد هستید و قصد ندارید محل امضای داور سوم چاپ گردد، خط زیر را فعال کنید:
+
+%	\csname znu@thirdRefereetrue\endcsname
+
+% چاپ جدول محل امضای دانشجو، اساتید راهنما، مشاور و داور:
+	\signature
+% چاپ صورت‌جلسه:
+%	\clearpage
+	\proceedings
+\end{document}

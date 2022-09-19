@@ -1,0 +1,87 @@
+% !TeX root = ../proposal.tex
+% بسته‌های فراخوانی‌شده و دستورهای استفاده‌شده:
+% geometry
+%\geometry{left=2cm, right=2cm, bottom=3cm, top=2cm}
+% xcolor
+% mdframed
+% titlesec
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بسته‌های ریاضی:
+\usepackage{mathtools} % amsmath
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mleftright}
+\RenewCommandCopy{\left}{\mleft}
+\RenewCommandCopy{\right}{\mright}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بسته‌ای برای اصلاح اندازهٔ فونت:
+\usepackage{fix-cm}
+\usepackage{lmodern}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% عکس و مسیر عکس‌ها:
+\usepackage{graphicx}
+\graphicspath{{./pictures/}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بستهٔ مربوط به جدول‌ها و مشخصه‌های ستونی جدید:
+\usepackage{array}
+\newcolumntype{M}[1]{m{\dimexpr#1\textwidth-2\tabcolsep-2\arrayrulewidth}}
+\newcolumntype{P}[1]{p{\dimexpr#1\textwidth-2\tabcolsep-2\arrayrulewidth}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بسته‌ای برای ادغام چند ردیف از جدول:
+\usepackage{multirow}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بسته‌ای برای مدیریت کپشن‌ها:
+\usepackage{caption}
+\captionsetup{font=small, aboveskip=2pt, width=0.85\linewidth}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بسته‌ای برای تنظیم فاصلهٔ خطوط:
+\usepackage{setspace}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بسته‌ای برای مدیریت ارجاع به منابع:
+\makeatletter
+\ifznu@useRefNum
+	\usepackage{cite}
+	\bibliographystyle{unsrt-fa}
+\else
+	\usepackage{natbib}
+	\bibliographystyle{chicago-fa}
+\fi
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بسته‌های جدید خود را اینجا فراخوانی کنید:
+\usepackage{fontawesome5}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% پرش و رنگی‌کردن لینک‌ها:
+\makeatletter
+\ifznu@print
+	\usepackage[hidelinks]{hyperref}
+\else
+	\usepackage[pagebackref]{hyperref}
+\fi
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% بستهٔ زی‌پرشین و فونت‌ها:
+\usepackage[%
+	perpagefootnote=on%
+]{xepersian}
+\settextfont[Path={./fonts/},%
+	Scale=1.1,%
+	ItalicFont={IRLotusICEE_Iranic.ttf},%
+	BoldFont={IRLotusICEE_Bold.ttf},%
+	BoldItalicFont={IRLotusICEE_BoldIranic.ttf},%
+]{IRLotusICEE.ttf}
+\makeatletter
+\ifznu@digitFa
+	\setmathdigitfont[Path={./fonts/},%
+		Scale=1.1,%
+		ItalicFont={IRLotusICEE_Iranic.ttf},%
+		BoldFont={IRLotusICEE_Bold.ttf},%
+		BoldItalicFont={IRLotusICEE_BoldIranic.ttf},%
+	]{IRLotusICEE.ttf}
+\fi
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف برخی حروف ایستاده در محیط ریاضی:
+\newcommand{\diff}{\ensuremath{\,\mathrm d}}
+\newcommand{\I}{\ensuremath{\mathrm i}}
+\newcommand{\E}{\ensuremath{\mathrm e}}

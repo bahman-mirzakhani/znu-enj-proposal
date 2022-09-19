@@ -1,0 +1,144 @@
+% !TeX root = ../proposal.tex
+\section{تعریف مسئله و پیشینۀ پژوهش}
+
+در ابتدا، انتظار می‌ره که با سیستم حروف‌چینی
+\lr{\LaTeX}
+آشنایی کافی را کسب کرده باشین.
+
+برای کار با این قالب، به کامنت‌های گذاشته‌شده در هر بخش توجه کنین. همچنین یک ویدئو در این خصوص آماده
+شده است که می‌تونین از لینک‌های ذیل دریافت و مشاهده کنین:
+\begin{itemize}
+	\item \href{https://www.aparat.com/Bahman_Mirzakhani/playlists}{آپارات}
+	\item\href{https://www.youtube.com/channel/UCzZoLZNsM9utoqycWoG7f5A/featured}{\lr{YouTube}}
+	\item
+	همچنین، آخرین نسخهٔ قالب، در
+	\href{https://github.com/bahman-mirzakhani/znu-enj-proposal.git}{\lr{GitHub}}
+	قرار داده می‌شود.
+\end{itemize}
+حین استفاده، اگه متوجه مشکلی در قالب شدین، می‌تونین از طریق مورد اول لیست
+زیر گزارش و از موارد دیگه برای سؤالات مربوط به لیتک استفاده کنین.
+\begin{itemize}
+	\begin{latinitems}
+		\item[\faMailBulk]
+		\href{mailto:bmirzakhani.en@gmail.com}%
+			{bmirzakhani.en@gmail.com}
+		\item[\faInternetExplorer]
+		\href{http://qa.parsilatex.com/}{http://qa.parsilatex.com}
+		\item[\faInternetExplorer]
+		\href{https://tex.stackexchange.com/}{https://tex.stackexchange.com}
+	\end{latinitems}
+\end{itemize}
+
+بسته‌های ذکرشده در ابتدای فایل
+\texttt{commands.tex}،
+فراخوانی شده‌اند و نیازی به فراخوانی مجدد آن‌ها نیست و می‌تونین از دستورات اون بسته‌ها،
+در صورت نیاز، استفاده کنین. اگه به بسته‌های جدیدی نیاز داشتین، در قسمت مشخص‌شدهٔ
+فایل
+\texttt{commands.tex}،
+فراخوانی کنین. برای مثال، بستۀ
+\texttt{fontawesome5}،
+جهت استفاده در آیکون‌های لیست قبلی، فراخوانی شده است. بعد از پاک‌کردن این متن،
+اون بسته رو هم پاک کنین؛ چون احتمالاً بهش نیاز ندارین.
+
+\begin{description}
+\item[توصیه:] \itshape
+اگه به بسته‌ای نیاز ندارین، فراخوانی نکنین.
+\end{description}
+
+نیازی به نصب فونت خاصی نیست و فونت‌های مورد نیاز در پوشۀ
+\texttt{fonts}
+قرار داده و استفاده شده‌اند.
+
+\section{نوآوری و تفاوت کار پیشنهادی با تحقیقات قبلی}
+
+\section{اهداف}
+
+\section{فرضیه‌ها یا سؤالات پژوهش}
+
+\section{روش اجرای پژوهش}
+
+\section{%
+	جامعه آماری، تعداد نمونه و روش نمونه‌گیری (در صورت لزوم)}
+
+\section{روش تجزیه و تحلیل اطلاعات}
+
+\section{فهرست منابع و مآخذ}
+منابع به‌کمک
+\lr{\textsc{Bib}\TeX}
+ایجاد و در فایل
+\verb|References.bib|
+در پوشهٔ
+\verb|texFiles|
+ذخیره می‌شوند. برای منابع فارسی، بایستی مدخلِ
+\begin{LTR}
+	\verb|language = {persian},|
+\end{LTR}\noindent
+نیز اضافه گردد.
+
+\subsection{روش عددی}
+در این روش، بایستی آپشن
+\lr{refNumber}
+برای کلاس نوشتار، فعال شده باشد و برای ارجاع‌دهی، از دستور
+\verb|\cite{label}|
+استفاده می‌شود. برای مثال، ارجاع به مراجع
+\cite[فصل 4]{abtahi1388latex}،
+\cite{oommen2002}
+و
+\cite{knuth1984texbook}
+به تنهایی و همچنین با هم:
+\cite{abtahi1388latex,oommen2002,knuth1984texbook}.
+در روش عددی، نیازی به مدخلِ
+\texttt{authorfa}
+نیست و می‌توانید ننویسید.
+
+این قسمت نیاز به اجرای
+\lr{\textsc{Bib}\TeX}
+دارد که ترتیب اجرا به این صورت است:
+\begin{latin}
+	\begin{verbatim}
+		xelatex
+		bibtex
+		xelatex
+		xelatex
+	\end{verbatim}
+\end{latin}
+
+\subsection{روش نویسنده-سال}
+در این روش، بایستی آپشن
+\lr{refNumber}
+برای کلاس نوشتار، غیرفعال شده باشد و برای منابع لاتین، اسم فارسی نویسندگان را در مدخلِ
+\begin{LTR}
+	\verb|authorfa = {Family, Name and Family, Name},|
+\end{LTR}\noindent
+وارد کنید. دقت کنید که دقیقاً با فرمت ذکرشده وارد شوند. به فایل
+\verb|References.bib|
+مراجعه کنید.
+
+برای ارجاع در وسط جمله، از دستور
+\verb|\citet{label}|
+و در انتهای جمله، از دستور
+\verb|\citep{label}|
+استفاده می‌شود. اگر قصد نوشتن اسامی نویسندگان خارجی را در پاورقی دارید،
+بعد از ارجاع، از دستور پاورقی استفاده کنید؛ یعنی:
+\begin{LTR}
+	\verb|\citet{label}\LTRfootnote{\citeauthor*{label}}|
+\end{LTR}
+
+این قسمت نیاز به اجرای
+\lr{\textsc{Bib}\TeX8}
+دارد. دستور مربوطه، در فایل
+\verb|execution.txt|
+داخل پوشهٔ
+\verb|texFiles|
+نوشته شده است. یک دستور جدید در ویرایشگر خود تعریف و استفاده کنید. ترتیب اجرا به این صورت است:
+\begin{latin}
+	\begin{verbatim}
+		xelatex
+		bibtex8 -W -c cp1256fa
+		xelatex
+		xelatex
+	\end{verbatim}
+\end{latin}
+\begin{RefBox}
+	\bibliography{./texFiles/References}\vskip0pt
+\end{RefBox}
